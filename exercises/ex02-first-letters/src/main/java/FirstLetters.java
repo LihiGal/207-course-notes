@@ -26,6 +26,14 @@ public class FirstLetters {
      */
     public static String firstLetters(String words) {
         // TODO: complete
-        return "";
+        String first = String.valueOf(words.charAt(0));
+        for (int i = 1 ; i < words.length(); i++){
+            char x = Character.valueOf(words.charAt(i));
+            if (x == ' ') {
+                first = first + words.charAt(i+1);
+            }
+        }
+        return first;
     }
 }
+// mvn -P exercises test -pl exercises/ex02-first-letters

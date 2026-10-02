@@ -39,7 +39,10 @@ public class Aliasing {
      * @param amount the value to add to each element
      */
     public static void addInPlace(int[] arr, int amount) {
-        // TODO: complete
+        // DONE: complete
+        for (int i = 0; i< arr.length; i++){
+            arr[i] += amount;
+        }
     }
 
     /**
@@ -51,7 +54,13 @@ public class Aliasing {
      * @return a new array of the same length, each element increased by amount
      */
     public static int[] addCopy(int[] arr, int amount) {
-        // TODO: complete
-        return new int[1];
+        // DONE: complete
+        int[] numbersNew = new int[arr.length];
+        for (int i = 0; i < numbersNew.length; i++){
+            numbersNew[i] += arr[i] + amount;
+        }
+        return numbersNew;
     }
 }
+
+// mvn -P exercises test -pl exercises/ex03-alias-side-effects

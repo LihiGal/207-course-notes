@@ -27,3 +27,4 @@ public class Rectangle {
             return false;
     }
 }
+// mvn -P exercises test -pl exercises/ex05-cleanup
